@@ -8,5 +8,5 @@
   "levels": {},
   "daily_rewards": [30, 40, 50, 75, 100, 150, 250],
   "life_regen_min": 20,
-  "wheel_cooldown_h": 4
+  "wheel_cooldown_h": 2.5
 }
