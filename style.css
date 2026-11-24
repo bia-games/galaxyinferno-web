@@ -1,0 +1,80 @@
+/* Galaxy Inferno – Webseite (galaxyinferno.de). Schriften liegen lokal (keine Google-Fonts -> DSGVO). */
+@font-face { font-family: "Exo 2"; src: url("fonts/Exo2.ttf") format("truetype"); font-weight: 100 900; font-display: swap; }
+@font-face { font-family: "Kenvector"; src: url("fonts/kenvector_future.ttf") format("truetype"); font-display: swap; }
+:root {
+  --bg: #08030a;
+  --panel: rgba(30, 10, 14, 0.72);
+  --line: rgba(255, 110, 40, 0.28);
+  --text: #f3e9e2;
+  --muted: #c9b3a8;
+  --fire: #ff6a1a;
+  --fire2: #ffb347;
+  --cream: #fff1cf;
+}
+* { box-sizing: border-box; }
+html { color-scheme: dark; }
+body {
+  margin: 0;
+  font-family: "Exo 2", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--text);
+  background:
+    radial-gradient(ellipse 70% 45% at 80% 8%, rgba(255, 90, 20, 0.22), transparent 70%),
+    radial-gradient(ellipse 60% 40% at 10% 30%, rgba(150, 20, 60, 0.25), transparent 70%),
+    radial-gradient(ellipse 80% 50% at 50% 100%, rgba(255, 70, 0, 0.14), transparent 70%),
+    var(--bg);
+  background-attachment: fixed;
+  padding: 0 16px;
+}
+a { color: var(--fire2); }
+a:hover { color: var(--cream); }
+.wrap { max-width: 920px; margin: 0 auto; }
+nav {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 18px 0;
+}
+nav .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--cream);
+  font-family: "Kenvector", "Exo 2", sans-serif; font-weight: 800; letter-spacing: 0.06em; }
+nav .brand img { width: 40px; height: 40px; border-radius: 10px; }
+nav .links { display: flex; flex-wrap: wrap; gap: 18px; font-size: 15px; }
+nav .links a { color: var(--muted); text-decoration: none; }
+nav .links a:hover { color: var(--cream); }
+
+.hero { text-align: center; padding: 40px 0 30px; }
+.hero .appicon { width: 168px; height: 168px; border-radius: 38px;
+  box-shadow: 0 0 60px rgba(255, 100, 20, 0.45), 0 10px 30px rgba(0, 0, 0, 0.6); }
+h1.title {
+  font-family: "Kenvector", "Exo 2", sans-serif; font-weight: 900;
+  font-size: clamp(40px, 9vw, 76px); line-height: 1.02; margin: 28px 0 8px;
+  color: var(--cream); letter-spacing: 0.04em;
+  text-shadow: 0 0 2px #d9420a, 0 0 18px rgba(255, 90, 20, 0.8), 0 0 42px rgba(255, 60, 0, 0.5);
+}
+.sub { font-size: 20px; color: var(--fire2); font-weight: 600; margin: 0 0 18px; }
+.lead { max-width: 620px; margin: 0 auto 28px; color: var(--muted); }
+.btn {
+  display: inline-block; padding: 14px 28px; border-radius: 14px; font-weight: 700; font-size: 18px;
+  text-decoration: none; color: #1a0600; background: linear-gradient(180deg, var(--fire2), var(--fire));
+  box-shadow: 0 0 24px rgba(255, 106, 26, 0.5);
+}
+.btn.soon { background: rgba(255, 255, 255, 0.08); color: var(--muted); box-shadow: none; border: 1px solid var(--line); }
+
+.shots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 40px 0; }
+.shots img { width: 100%; border-radius: 18px; border: 1px solid var(--line); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+@media (max-width: 640px) { .shots { grid-template-columns: 1fr 1fr; } .shots img:nth-child(3) { display: none; } }
+
+.features { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin: 30px 0 50px; }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 18px 20px; }
+.card h3 { margin: 0 0 6px; color: var(--cream); font-size: 18px; }
+.card p { margin: 0; color: var(--muted); font-size: 15px; }
+
+.doc { background: var(--panel); border: 1px solid var(--line); border-radius: 18px; padding: 28px clamp(18px, 4vw, 40px); margin: 20px 0 50px; }
+.doc h1 { font-family: "Kenvector", "Exo 2", sans-serif; color: var(--cream); font-size: clamp(26px, 5vw, 36px); margin-top: 0; }
+.doc h2 { color: var(--fire2); font-size: 20px; margin-top: 30px; }
+.doc p, .doc li { color: var(--text); }
+.doc .small { color: var(--muted); font-size: 14px; }
+
+footer { border-top: 1px solid var(--line); padding: 24px 0 40px; color: var(--muted); font-size: 14px;
+  display: flex; flex-wrap: wrap; gap: 8px 22px; justify-content: space-between; }
+footer .links { display: flex; flex-wrap: wrap; gap: 18px; }
+footer a { color: var(--muted); }
