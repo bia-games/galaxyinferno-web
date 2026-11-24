@@ -1,0 +1,12 @@
+{
+  "format": 1,
+  "_info": "Galaxy Inferno Balance. 1.0 = unveraendert. Gilt ab der naechsten Runde. Werte werden im Spiel auf sichere Bereiche begrenzt.",
+  "enemy_hp": 1.0,
+  "enemy_fire": 1.0,
+  "enemy_speed": 1.0,
+  "coins": 1.0,
+  "levels": {},
+  "daily_rewards": [30, 40, 50, 75, 100, 150, 250],
+  "life_regen_min": 20,
+  "wheel_cooldown_h": 4
+}
