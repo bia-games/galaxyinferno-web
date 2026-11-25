@@ -6,7 +6,16 @@
   "enemy_speed": 1.0,
   "coins": 1.0,
   "levels": {},
-  "daily_rewards": [30, 40, 50, 75, 100, 150, 250],
+  "daily_rewards": [
+    30,
+    40,
+    50,
+    75,
+    100,
+    150,
+    250
+  ],
   "life_regen_min": 20,
-  "wheel_cooldown_h": 2.5
+  "wheel_cooldown_h": 2.5,
+  "vault_part": 0.12
 }
